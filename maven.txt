@@ -1,0 +1,12 @@
+Couldn't get the github mvn plugin working, so just manually push:
+git clone https://github.com/saleswise/ews-java-api.git /tmp/ews-java-api/mvn-repo
+cd /tmp/ews-java-api/mvn-repo
+git checkout -b mvn-repo origin/mvn-repo
+cd -
+mvn deploy
+cd /tmp/ews-java-api/mvn-repo
+git add .
+git commit -a -m "upgrade"
+git push origin mvn-repo
+
+(Note: have not tried the above verbatim, so some tweaks may be needed.)
